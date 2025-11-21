@@ -35,5 +35,12 @@ a{
     animation:slideRight 1s ease forwards;
 }
 .navbar a{
-
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    gap: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease fowards ;
 }
