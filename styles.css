@@ -1,98 +1,39 @@
-body {
-    background-color: rgb(98, 194, 194);
-}
-a{
-  color: black;
-  text-decoration:none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 
 }
-.navbar{
+body{
+    background: #1f242d;
+
+}
+a{
+    text-decoration: none;
+}
+.header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100;
-    padding: 25px 50%;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-.navbar .logo{
-    font-size: 30px;
-    font-weight: 900;
-}
-.navbar ul {
-    display: flex;
-}
-.navbar ul l1 {
-    margin-left: 35px;
-}
-.navbar ul l1 a {
-    font-size: 20px;
-    font-weight: 500;
-    transition: .5s;
-}
-.navbar ul l1:hover a,
-.navbar ul l1.active a{
-    color:antiquewhite
-}
-.Home {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 60px 9% 0;
-    color: aliceblue;
 
 }
-.Home-info h1 {
-font-size: 55px;
-}
-.Home-info h2 {
-    font-size: 32px;
-    margin-top: -10px;
-}
-.Home-info p {
-    font-size: 16px;
-    margin: 10px 0 25px;
-}
-.Home-info.bnt-sci {
-    display: flex;
-    align-items: center;
-}
-.bnt {
-    display: inline-block;
-    padding: 10px 30px;
-    background: rgb(98, 194, 194);
-    border: 2px solid rgb(98, 194, 194);
-    border-radius: 40px;
-    box-shadow: 0  0 10px rgb(98, 194, 194);
-    font-size: 16px;
-    color:rgb(17, 153, 85);
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
     font-weight: 600;
-    transition: .5s;
+    cursor: default;
+    opacity: 0;
+    animation:slideRight 1s ease forwards;
 }
-.bnt:hover{
-    background: transparent;
-    color: rgb(98, 194, 194);
-    box-shadow: none;
-}
-.Home-info.bnt-sci{
-    margin-left: 20px;
+.navbar a{
 
-}
-.Home-info.bnt-sci a {
-    display: inline-flex;
-    padding: 8px;
-    border: 2px solid rgb(241, 186, 140);
-    border-radius: 50%;
-    font-size: 20px;
-    color: rgb(241, 186, 140);
-    margin: 0% 8px;
-    transition: .5s;
-}
-Home-img .img-box{
-    width: 32vw;
-    height: 32vw;
-    background-color: brown;
-    border-radius: 50%;
 }
