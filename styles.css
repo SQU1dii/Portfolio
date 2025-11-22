@@ -2,45 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-
+    font-family: "Poppins", sans-serif;
 }
 body{
-    background: #1f242d;
-
+    background-color: #1f242d;
+    color: #fff;
 }
 a{
     text-decoration: none;
 }
-.header{
+.navbar{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0%;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-
+    z-index: 100%;
 }
 .logo{
     font-size: 25px;
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: default;
     opacity: 0;
-    animation:slideRight 1s ease forwards;
+    animation: slideRight .1s ease forwards;
 }
 .navbar a{
     display: inline-block;
     font-size: 20px;
-    font-weight: 700;
     color: #fff;
-    gap: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
     transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease fowards ;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: #4caf50;
+    transform: translateY(-2px);
+    transition: all .3s ease-in-out;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #0ef;
+}
+/*--- HOME SECTION---*/
+.home{
+display: flex;
+position: relative;
+width: 100%;
+height: 100vh;
+justify-content: space-between;
+align-items: center;
+padding: 70px 10% 0;
+
 }
