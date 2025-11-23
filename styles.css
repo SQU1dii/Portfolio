@@ -90,7 +90,7 @@ padding: 70px 10% 0;
     animation-delay: 1s;
 }
 .home-content p {
-    font-size: 16px;
+    font-size: 26px;
     opacity: 0;
      animation:slideLeft 1s ease forwards;
     animation-delay: 1s;
@@ -196,3 +196,74 @@ padding: 70px 10% 0;
         transform: scale(1);
         opacity: 1;
     }
+}
+    /* --- Section Layout --- */
+.services {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+/* Container styling */
+.Services-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Section heading */
+.Services-content h3 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: #1f1f1f;
+}
+
+/* Paragraph styling */
+.Services-content p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Highlighted bold text */
+.Services-content b {
+  color: #1e79ff;
+}
+
+/* --- Hover Interactions --- */
+.Services-content:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* --- Animation Keyframes --- */
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .services {
+    font-size: 2rem;
+  }
+  .Services-content h3 {
+    font-size: 1.6rem;
+  }
+  .Services-content p {
+    font-size: 1rem;
+  }
+}
