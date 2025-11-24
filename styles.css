@@ -90,7 +90,7 @@ padding: 70px 10% 0;
     animation-delay: 1s;
 }
 .home-content p {
-    font-size: 26px;
+    font-size: 23px;
     opacity: 0;
      animation:slideLeft 1s ease forwards;
     animation-delay: 1s;
@@ -197,73 +197,319 @@ padding: 70px 10% 0;
         opacity: 1;
     }
 }
-    /* --- Section Layout --- */
+  
+/*----------------SERVICES SECTION ----------*/
+
+
 .services {
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #222;
+    padding: 80px 6%;
+    background: #f7f9fc;  /* light modern background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Container styling */
+/* Heading */
+.services .heading {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.services .heading span {
+    color: #1e79ff; /* accent color */
+}
+
+/* Content box */
 .Services-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transform: translateY(30px);
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    line-height: 1.75;
+    font-size: 1.08rem;
+    color: #444;
+    border-left: 5px solid #1e79ff;
+    transition: 0.35s ease;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeSlideUp 0.8s ease forwards;
 }
 
-/* Section heading */
-.Services-content h3 {
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-  color: #1f1f1f;
-}
-
-/* Paragraph styling */
-.Services-content p {
-  line-height: 1.7;
-  font-size: 1.05rem;
-  color: #444;
-}
-
-/* Highlighted bold text */
-.Services-content b {
-  color: #1e79ff;
-}
-
-/* --- Hover Interactions --- */
+/* On hover – make it interactive */
 .Services-content:hover {
-  transform: translateY(-5px);
-  transition: 0.3s ease;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
 }
 
-/* --- Animation Keyframes --- */
-@keyframes fadeUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Bold text highlight */
+.Services-content b {
+    color: #1e79ff;
+    font-weight: 600;
 }
 
-/* --- Responsive --- */
+/* Animation */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .services {
-    font-size: 2rem;
-  }
-  .Services-content h3 {
-    font-size: 1.6rem;
-  }
-  .Services-content p {
-    font-size: 1rem;
-  }
+    .services {
+        padding: 60px 5%;
+    }
+
+    .services .heading {
+        font-size: 2.2rem;
+    }
+
+    .Services-content {
+        padding: 30px 25px;
+        font-size: 1rem;
+    }
 }
+
+
+
+/* ------- SKILLS SECTION -------  */
+
+
+.skills {
+    padding: 80px 5%;
+    background: #0f0f13; /* dark modern background */
+    color: #fff;
+}
+
+.skills .heading {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 70px;
+    font-weight: 700;
+}
+
+.skills .heading span {
+    color: #4db5ff; /* accent color */
+}
+
+/* Layout */
+.Skills-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Skills-column {
+    flex: 1 1 380px;
+    background: #16161c;
+    padding: 25px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.Skills-column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(77,181,255,0.25);
+}
+
+/* Titles */
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #4db5ff;
+    font-weight: 600;
+}
+
+/* Skill bars container */
+.Skills-box {
+    margin-top: 10px;
+}
+
+.progress {
+    margin-bottom: 25px;
+}
+
+.progress h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #e3e3e3;
+}
+
+/* Bar background */
+.progress .bar {
+    height: 10px;
+    width: 100%;
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Fill animation */
+.progress .bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #4db5ff, #1e79ff);
+    border-radius: 5px;
+    animation: loadSkill 2s ease forwards;
+}
+
+/* Individual skill bar widths */
+.progress:nth-child(1) .bar span { width: 92%; }
+.progress:nth-child(2) .bar span { width: 82%; }
+.progress:nth-child(3) .bar span { width: 60%; }
+.progress:nth-child(4) .bar span { width: 56%; }
+.progress:nth-child(5) .bar span { width: 83%; }
+
+/* Pro skills column */
+.Skills-column:nth-child(2) .progress:nth-child(1) .bar span { width: 80%; }
+.Skills-column:nth-child(2) .progress:nth-child(2) .bar span { width: 85%; }
+.Skills-column:nth-child(2) .progress:nth-child(3) .bar span { width: 60%; }
+.Skills-column:nth-child(2) .progress:nth-child(4) .bar span { width: 70%; }
+
+/* Animation keyframe */
+@keyframes loadSkill {
+    from { width: 0; }
+    to { width: inherit; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .heading { font-size: 2.3rem; }
+    .title { font-size: 1.5rem; }
+    .Skills-column { padding: 20px; }
+}
+/* ----------------------------- */
+/*         CONTACT SECTION       */
+/* ----------------------------- */
+
+.contact {
+    padding: 80px 6%;
+    background: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+.contact .heading {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.contact .heading span {
+    color: #1e79ff;
+}
+
+/* Form container */
+.contact form {
+    background: #1f242d;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px 35px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 1.05rem;
+    border-left: 5px solid #1e79ff;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Labels */
+.contact label {
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Inputs */
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px 14px;
+    border-radius: 10px;
+    border: 2px solid #d3dce6;
+    font-size: 1rem;
+    background: #fff;
+    color: #444;
+    transition: 0.3s ease-in-out;
+}
+
+/* Focus effects */
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #1e79ff;
+    box-shadow: 0 0 10px rgba(30,121,255,0.2);
+    outline: none;
+}
+
+/* Phone number field */
+.input-box {
+    margin-top: 10px;
+}
+
+.input-field input {
+    width: 100%;
+}
+
+/* Textarea */
+.contact textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.contact button {
+    padding: 12px 22px;
+    background: #1e79ff;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact button:hover {
+    background: #1458b3;
+    transform: translateY(-2px);
+}
+
+/* Entry animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact form {
+        padding: 30px 25px;
+    }
+
+    .contact .heading {
+        font-size: 2.2rem;
+    }
+}
+
