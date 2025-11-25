@@ -11,27 +11,35 @@ body{
 a{
     text-decoration: none;
 }
-.navbar{
+html {
+    /* This creates the native smooth scroll effect without relying solely on JS */
+    scroll-behavior: smooth; 
+    /* This ensures the fixed navbar doesn't cover your section titles when you click a link */
+    scroll-padding-top: 85px; 
+}
+.navbar {
     position: fixed;
     top: 0;
-    left: 0%;
+    left: 0;
     width: 100%;
     padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
 }
-.logo{
+.logo {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    cursor: default;
     opacity: 0;
     animation: slideRight .1s ease forwards;
+    cursor: pointer;
 }
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 20px;
     color: #fff;
@@ -41,6 +49,9 @@ a{
     transition: .3s;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
+    cursor: pointer; 
+    padding: 5px 10px; 
+    border-radius: 5px;
 }
 .navbar a:hover{
     color: #4caf50;
@@ -48,8 +59,10 @@ a{
     transition: all .3s ease-in-out;
 }
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: #0ef;
+    transform: translateY(-2px);
+    background: rgba(0, 238, 255, 0.05);
 }
 /*--- HOME SECTION---*/
 .home{
@@ -388,9 +401,9 @@ padding: 70px 10% 0;
     .title { font-size: 1.5rem; }
     .Skills-column { padding: 20px; }
 }
-/* ----------------------------- */
-/*         CONTACT SECTION       */
-/* ----------------------------- */
+
+/*--------CONTACT SECTION-------*/
+
 
 .contact {
     padding: 80px 6%;
@@ -434,7 +447,7 @@ padding: 70px 10% 0;
 /* Labels */
 .contact label {
     font-weight: 600;
-    color: #1a1a1a;
+    color: #0ef;
     display: flex;
     flex-direction: column;
     gap: 8px;
