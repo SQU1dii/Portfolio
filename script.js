@@ -104,5 +104,9 @@ contactForm.addEventListener("submit", function(e) {
     // clear input fields
     contactForm.reset();
 });
+/*-----------------------------------
+     FOOTER 
+------------------------------------*/
+document.getElementById("year").textContent = new Date().getFullYear();
 
 
