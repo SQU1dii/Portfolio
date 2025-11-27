@@ -219,7 +219,7 @@ html {
     }
 }
   
-/*----------------SERVICES SECTION - FIXED ----------*/
+/*----------------SERVICES SECTION - ----------*/
 
 .services {
     padding: 80px 6%;
@@ -243,7 +243,7 @@ html {
     color: #1e79ff;
 }
 
-/* FIXED: Limited width to prevent overlap */
+/*  Limited width to prevent overlap */
 .Services-content {
     max-width: 900px;
     width: 100%;
@@ -374,7 +374,7 @@ html {
     from { width: 0%; }
 }
 
-/*--------CONTACT SECTION - FIXED-------*/
+/*--------CONTACT SECTION - -------*/
 
 .contact {
     padding: 80px 6%;
@@ -534,7 +534,7 @@ html {
 }
 
 /* =====================
-   RESPONSIVE DESIGN - FIXED
+   RESPONSIVE DESIGN -
    ===================== */
 
 @media (max-width: 768px) {
